@@ -1,30 +1,23 @@
 import type { Metadata } from "next";
-import { Outfit, DM_Serif_Display } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const dmSerif = DM_Serif_Display({
-  variable: "--font-dm-serif",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "24Media — AI Receptionists & Lead Response for Trade Businesses",
+  title: "24Media — AI Automation for Small Business",
   description:
-    "24Media installs AI voice receptionists and lead response systems for trade businesses. Every call answered, every lead followed up — automatically. Based in Australia.",
+    "We help trades, retail, and service businesses automate scheduling, customer support, and lead follow-ups with tailored AI solutions. Less busywork, more bookings.",
   openGraph: {
-    title: "24Media — Never Miss Another Job",
+    title: "24Media — AI Automation for Small Business",
     description:
-      "AI receptionists and lead response systems for trade businesses. Every call answered, every lead followed up — automatically.",
+      "Automate scheduling, customer support, and lead follow-ups with tailored AI solutions built for small service businesses.",
     url: "https://24media.com.au",
     siteName: "24Media",
     locale: "en_AU",
@@ -38,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${dmSerif.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans bg-stone text-charcoal">
+    <html lang="en" className={`${jakarta.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans bg-white text-primary" suppressHydrationWarning>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

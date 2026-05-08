@@ -10,21 +10,23 @@ export const metadata: Metadata = {
 export default function HowItWorks() {
   return (
     <>
-      <section className="pt-36 pb-20 px-6 sm:px-8 lg:px-12">
-        <div className="max-w-5xl mx-auto">
-          <SectionLabel>Process</SectionLabel>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-charcoal/20 leading-[0.95] tracking-tight mt-6">
-            HOW IT<br /><span className="text-charcoal">WORKS</span><span className="text-terracotta">.</span>
+      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wide">Process</p>
+          <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-primary leading-[1.1] tracking-tight">
+            From first call to live system
+            <br />
+            <span className="text-accent">in under a week.</span>
           </h1>
-          <p className="mt-10 text-lg text-charcoal-light leading-relaxed max-w-xl">
-            From first call to live system in under a week. No tech skills required — we handle everything.
+          <p className="mt-6 text-lg text-secondary leading-relaxed max-w-2xl">
+            No tech skills required — we handle everything. You just tell us how your business works.
           </p>
         </div>
       </section>
 
-      <section className="border-t border-stone-dark/30 py-28 px-6 sm:px-8 lg:px-12">
+      <section className="border-t border-border py-24 lg:py-28 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-0 divide-y divide-stone-dark/30">
+          <div className="space-y-0 divide-y divide-border">
             <ProcessStep
               number="01"
               title="Discovery Call"
@@ -53,14 +55,14 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="bg-warm-white py-28 px-6 sm:px-8 lg:px-12">
+      <section className="bg-surface py-24 lg:py-28 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <SectionLabel>Your Part</SectionLabel>
-          <h2 className="font-serif text-3xl sm:text-4xl text-charcoal leading-tight mt-6 mb-4">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wide">Your Part</p>
+          <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary leading-tight">
             What you need to do.
           </h2>
-          <p className="text-lg text-charcoal-light mb-12">Almost nothing. Seriously.</p>
-          <div className="divide-y divide-stone-dark/30">
+          <p className="mt-4 text-lg text-secondary">Almost nothing. Seriously.</p>
+          <div className="mt-10 divide-y divide-border">
             <CheckItem text="Jump on a 20-minute discovery call" />
             <CheckItem text="Tell us your services and availability" />
             <CheckItem text="Approve the AI script before go-live" />
@@ -69,20 +71,20 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="py-28 px-6 sm:px-8 lg:px-12">
+      <section className="py-24 lg:py-28 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl text-charcoal leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary leading-tight">
             Ready to get started?
           </h2>
-          <p className="mt-6 text-lg text-charcoal-light">
+          <p className="mt-6 text-lg text-secondary">
             Book a free demo and we&apos;ll show you exactly how it works for your business.
           </p>
           <Link
             href="/book-demo"
-            className="mt-10 inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-8 py-3.5 rounded-full font-medium transition-colors"
+            className="mt-10 inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-7 py-3.5 rounded-lg font-semibold transition-colors text-sm"
           >
-            BOOK A FREE DEMO
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" /></svg>
+            Book a Free Demo
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
         </div>
       </section>
@@ -90,25 +92,16 @@ export default function HowItWorks() {
   );
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-center gap-2">
-      <span className="w-2 h-2 rounded-full bg-terracotta" />
-      <span className="text-xs font-medium uppercase tracking-wider text-muted">{children}</span>
-    </div>
-  );
-}
-
 function ProcessStep({ number, title, description, timeline }: { number: string; title: string; description: string; timeline: string }) {
   return (
     <div className="py-10 flex gap-8 items-start">
-      <span className="text-xs text-muted font-medium pt-1.5">{number}</span>
+      <span className="text-sm text-muted font-semibold pt-1">{number}</span>
       <div className="flex-1">
         <div className="flex items-center gap-4 mb-3">
-          <h3 className="text-xl font-semibold text-charcoal">{title}</h3>
-          <span className="text-xs font-medium text-terracotta uppercase tracking-wider">{timeline}</span>
+          <h3 className="text-lg font-semibold text-primary">{title}</h3>
+          <span className="text-xs font-semibold text-accent uppercase tracking-wider">{timeline}</span>
         </div>
-        <p className="text-charcoal-light leading-relaxed">{description}</p>
+        <p className="text-secondary leading-relaxed">{description}</p>
       </div>
     </div>
   );
@@ -117,10 +110,10 @@ function ProcessStep({ number, title, description, timeline }: { number: string;
 function CheckItem({ text }: { text: string }) {
   return (
     <div className="py-5 flex items-center gap-3">
-      <svg className="w-4 h-4 text-terracotta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
       </svg>
-      <p className="text-charcoal">{text}</p>
+      <p className="text-primary text-sm">{text}</p>
     </div>
   );
 }
