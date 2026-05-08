@@ -46,7 +46,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted">&copy; {new Date().getFullYear()} 24Media. All rights reserved.</p>
-          <p className="text-xs text-muted">Brisbane, Australia</p>
+          <p className="text-xs text-muted">Suite 21, Level 1/247 Bayview St, Hollywell QLD 4216</p>
         </div>
       </div>
     </footer>
